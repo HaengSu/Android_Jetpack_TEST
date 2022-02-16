@@ -6,6 +6,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 
+//test
 class MainActivity : AppCompatActivity() {
 
     lateinit var navController: NavController
