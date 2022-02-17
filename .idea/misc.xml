@@ -4,14 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/82104/AndroidStudioProjects/Navigation_Test/app/src/main/res/font/font.xml" value="0.4171875" />
-        <entry key="..\:/Users/82104/AndroidStudioProjects/Navigation_Test/app/src/main/res/layout/activity_main.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/82104/AndroidStudioProjects/Navigation_Test/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/82104/AndroidStudioProjects/Navigation_Test/app/src/main/res/layout/fragment_fragmentgoogle.xml" value="0.2536231884057971" />
         <entry key="..\:/Users/82104/AndroidStudioProjects/Navigation_Test/app/src/main/res/layout/fragment_google.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/82104/AndroidStudioProjects/Navigation_Test/app/src/main/res/layout/fragment_kakao.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/82104/AndroidStudioProjects/Navigation_Test/app/src/main/res/layout/fragment_like_list.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/82104/AndroidStudioProjects/Navigation_Test/app/src/main/res/layout/fragment_list.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/82104/AndroidStudioProjects/Navigation_Test/app/src/main/res/layout/fragment_login.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/82104/AndroidStudioProjects/Navigation_Test/app/src/main/res/layout/fragment_main.xml" value="0.16485507246376813" />
+        <entry key="..\:/Users/82104/AndroidStudioProjects/Navigation_Test/app/src/main/res/layout/fragment_main.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/82104/AndroidStudioProjects/Navigation_Test/app/src/main/res/layout/recyclerview_item.xml" value="0.38697916666666665" />
       </map>
     </option>
   </component>
