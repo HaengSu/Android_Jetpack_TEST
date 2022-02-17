@@ -43,7 +43,7 @@ class FragmentLogin : Fragment(), View.OnClickListener {
     override fun onClick(v : View?) {
         when(v?.id) {
             R.id.tv_guest -> {
-                navController.navigate(R.id.action_fragment_kakao_to_fragment_main)
+                navController.navigate(R.id.action_fragmentLogin_to_fragment_main)
             }
         }
     }

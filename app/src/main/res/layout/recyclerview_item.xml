@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_gravity="center_vertical"
     android:layout_marginStart="10dp"
     android:layout_marginEnd="10dp"
@@ -13,18 +14,22 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src=""
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_lottie"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:lottie_fileName="heart.json"
+            app:lottie_loop="false"
+            app:lottie_autoPlay="false"/>
 
         <TextView
+            android:id="@+id/tv_contents"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingStart="5dp"
-            android:textSize="40dp"
+            android:textSize="30dp"
+            android:layout_gravity="center_vertical"
             tools:hint="Test Note" />
-
 
     </LinearLayout>
 
