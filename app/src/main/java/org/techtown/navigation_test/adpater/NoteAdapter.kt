@@ -59,11 +59,16 @@ class NoteAdapter(val context: Context, var mList: ArrayList<NoteList>) :
                     Log.d(TAG, "bind: 좋아요가 눌렸습니다. isHeart = ${isHeart}")
                 }
             }
-
-
         }
     }
 }
+
+
+
+
+
+
+
 
 
 

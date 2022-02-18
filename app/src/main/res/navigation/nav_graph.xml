@@ -21,14 +21,22 @@
         android:id="@+id/fragment_kakao"
         android:name="org.techtown.navigation_test.fragment.FragmentKakao"
         android:label="fragment_kakao"
-        tools:layout="@layout/fragment_kakao" />
+        tools:layout="@layout/fragment_kakao" >
+        <action
+            android:id="@+id/action_fragment_kakao_to_fragment_main"
+            app:destination="@id/fragment_main" />
+    </fragment>
 
 <!--    Login Google-->
     <fragment
         android:id="@+id/fragment_google"
         android:name="org.techtown.navigation_test.fragment.FragmentGoogle"
         android:label="google"
-        tools:layout="@layout/fragment_google" />
+        tools:layout="@layout/fragment_google" >
+        <action
+            android:id="@+id/action_fragment_google_to_fragment_main"
+            app:destination="@id/fragment_main" />
+    </fragment>
 
 <!--    fragment main Screen-->
     <fragment
@@ -38,7 +46,9 @@
         android:label="fragment_main" >
         <action
             android:id="@+id/action_fragment_main_to_like_list"
-            app:destination="@id/like_list" />
+            app:destination="@id/like_list"
+            app:enterAnim="@anim/right_enter"
+            app:exitAnim="@anim/right_exit" />
     </fragment>
 
 <!--    Like List Screen-->
