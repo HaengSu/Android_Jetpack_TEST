@@ -1,10 +1,8 @@
-package org.techtown.navigation_test
+package org.techtown.navigation_test.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
-import androidx.navigation.fragment.NavHostFragment
+import org.techtown.navigation_test.R
 
 class MainActivity : AppCompatActivity() {
 

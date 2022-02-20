@@ -1,4 +1,4 @@
-package org.techtown.navigation_test.fragment
+package org.techtown.navigation_test.view.fragment
 
 import androidx.fragment.app.Fragment
 

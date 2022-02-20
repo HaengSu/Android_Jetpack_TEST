@@ -1,4 +1,4 @@
-package org.techtown.navigation_test.fragment
+package org.techtown.navigation_test.view.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,8 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
-import androidx.viewbinding.ViewBinding
 import org.techtown.navigation_test.R
 import org.techtown.navigation_test.databinding.FragmentLoginBinding
 

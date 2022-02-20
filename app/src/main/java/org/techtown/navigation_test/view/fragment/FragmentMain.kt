@@ -1,4 +1,4 @@
-package org.techtown.navigation_test.fragment
+package org.techtown.navigation_test.view.fragment
 
 import android.content.Context
 import android.os.Bundle
@@ -7,22 +7,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import org.techtown.navigation_test.DataModel.NoteList
-import org.techtown.navigation_test.DataModel.NoteViewModel
-import org.techtown.navigation_test.DataModel.SetEvent
-import org.techtown.navigation_test.MainActivity
 import org.techtown.navigation_test.R
-import org.techtown.navigation_test.adpater.NoteAdapter
-import org.techtown.navigation_test.custom_dialog.CustomDialog
 import org.techtown.navigation_test.databinding.FragmentMainBinding
+import org.techtown.navigation_test.model.roomdb.NoteDataTable
+import org.techtown.navigation_test.view.CustomDialog
+import org.techtown.navigation_test.view.MainActivity
+import org.techtown.navigation_test.view_model.adpater.NoteAdapter
+import org.techtown.navigation_test.model.roomdb.NoteList
+import org.techtown.navigation_test.model.roomdb.NoteViewModel
+import org.techtown.navigation_test.model.roomdb.SetEvent
 
 class FragmentMain : Fragment(), View.OnClickListener {
 
@@ -36,6 +34,7 @@ class FragmentMain : Fragment(), View.OnClickListener {
     private lateinit var mAdapter: NoteAdapter
     private lateinit var mList: ArrayList<NoteList>
     private lateinit var mViewModel: NoteViewModel
+    private lateinit var noteDataTable: NoteDataTable
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -64,10 +63,17 @@ class FragmentMain : Fragment(), View.OnClickListener {
         mViewModel = ViewModelProvider(this).get(NoteViewModel::class.java)
 
         //옵저버로 현재값을 관찰하여 바뀔때마다 할당한다.
-        mViewModel.currentCount.observe(viewLifecycleOwner, Observer {
-            binding.mainCount.text = it.toString()
-            Log.d(TAG, "onViewCreated: mList.size가 변화였습니다 = ${mList.size}")
-        })
+        mViewModel.apply {
+            currentCount.observe(viewLifecycleOwner, Observer {
+                binding.mainCount.text = it.toString()
+                Log.d(TAG, "onViewCreated: mList.size가 변화였습니다 = ${mList.size}")
+            })
+
+            noteContents.observe(viewLifecycleOwner, Observer {
+                updateCount(event = SetEvent.PLUS)
+            })
+
+        }
     }
 
     //context 가져오기
@@ -90,7 +96,14 @@ class FragmentMain : Fragment(), View.OnClickListener {
                     override fun addContents(contents: String) {
                         mList.add(NoteList(contents))
                         if (!contents.isEmpty()) {
-                            mViewModel.updateCount(event = SetEvent.PLUS)
+                            noteDataTable = NoteDataTable()
+                            noteDataTable.contents = contents
+
+                            mViewModel.apply {
+                                insert(noteDataTable)
+                            }
+
+
                         }
                     }
                 })

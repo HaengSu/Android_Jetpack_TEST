@@ -1,4 +1,4 @@
-package org.techtown.navigation_test.DataModel
+package org.techtown.navigation_test.model.roomdb
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
@@ -13,7 +13,10 @@ interface NoteDao {
     @Delete
     suspend fun delete(dataTable : NoteDataTable)
 
+    @Query("DELETE FROM note_table")
+    suspend fun deleteAll()
+
     //Livedata 를 사용 가능하게 함.
-    @Query("SELECT * FROM NoteDataTable")
+    @Query("SELECT * FROM note_table")
     fun getAll() : LiveData<List<NoteDataTable>>
 }

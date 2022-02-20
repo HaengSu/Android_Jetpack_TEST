@@ -1,15 +1,12 @@
-package org.techtown.navigation_test.adpater
+package org.techtown.navigation_test.view_model.adpater
 
 import android.animation.ValueAnimator
 import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.Adapter
 import androidx.recyclerview.widget.RecyclerView
-import com.airbnb.lottie.LottieAnimationView
-import org.techtown.navigation_test.DataModel.NoteList
+import org.techtown.navigation_test.model.roomdb.NoteList
 import org.techtown.navigation_test.databinding.RecyclerviewItemBinding
 
 class NoteAdapter(val context: Context, var mList: ArrayList<NoteList>) :
