@@ -17,7 +17,7 @@ import org.techtown.navigation_test.databinding.FragmentMainBinding
 import org.techtown.navigation_test.model.roomdb.NoteDataTable
 import org.techtown.navigation_test.view.CustomDialog
 import org.techtown.navigation_test.view.MainActivity
-import org.techtown.navigation_test.view_model.adpater.NoteAdapter
+import org.techtown.navigation_test.adpater.NoteAdapter
 import org.techtown.navigation_test.model.roomdb.NoteList
 import org.techtown.navigation_test.model.roomdb.NoteViewModel
 import org.techtown.navigation_test.model.roomdb.SetEvent

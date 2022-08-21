@@ -1,4 +1,4 @@
-package org.techtown.navigation_test.view_model.adpater
+package org.techtown.navigation_test.adpater
 
 import android.animation.ValueAnimator
 import android.content.Context
